@@ -121,7 +121,7 @@ import { constants } from 'setaria';
 import { Loading } from 'setaria-ui';
 import { addResizeListener, removeResizeListener } from 'setaria-ui/src/utils/resize-event';
 import route from '@/config/route';
-import Framework from 'skyrunner-web-framework';
+import Framework from 'setaria-vue-component-library';
 import { MODULE } from '@/constant/common';
 import { findResourceByRoute, getPublicResourceUrl } from '@/util';
 

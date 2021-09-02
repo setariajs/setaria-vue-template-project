@@ -1,4 +1,4 @@
-import Framework from 'skyrunner-web-framework';
+import Framework from 'setaria-vue-component-library';
 import bizModule from './biz-module';
 
 const {

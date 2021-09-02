@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn && yarn upgrade:framework && yarn vue-cli-service serve --mode dev",
-    "upgrade:framework": "yarn upgrade skyrunner-web-framework",
+    "upgrade:framework": "yarn upgrade setaria-vue-component-library",
     "lint": "vue-cli-service lint",
     "analyse": "setaria --script analyse"
   },

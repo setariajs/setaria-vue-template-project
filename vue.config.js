@@ -23,8 +23,6 @@ const config = {
       alias: {
         'sr-component': path.resolve(__dirname, './src/common/component'),
         'sr-service': path.resolve(__dirname, './src/common/service'),
-        'sr-util-common': 'skyrunner-web-framework/src/util/common',
-        'sr-util-odata': 'skyrunner-web-framework/src/util/odata',
       },
     },
   },
