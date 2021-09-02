@@ -6,8 +6,13 @@ const {
   VUE_APP_CLIENT_MODULE_BASE_URL,
 } = process.env;
 
+let publicPath = `/${VUE_APP_SITE_ID}/${VUE_APP_CLIENT_BASE_URL}`;
+if (VUE_APP_CLIENT_MODULE_BASE_URL && VUE_APP_CLIENT_MODULE_BASE_URL !== '') {
+  publicPath = `${publicPath}/${VUE_APP_CLIENT_MODULE_BASE_URL}`;
+}
+
 const config = {
-  publicPath: `/${VUE_APP_SITE_ID}/${VUE_APP_CLIENT_BASE_URL}/${VUE_APP_CLIENT_MODULE_BASE_URL}`,
+  publicPath,
   lintOnSave: false,
   productionSourceMap: false,
   pages: {
@@ -42,9 +47,9 @@ const proxyPrefixUrl = `/${VUE_APP_SITE_ID}/${VUE_APP_API_BASE_URL}`;
 // dev模式代理设置
 if (VUE_APP_SYSTEM_MODE === 'dev') {
   config.devServer.proxy[proxyPrefixUrl] = {
-    pathRewrite: {
-      [proxyPrefixUrl]: '/sap/opu/odata/sap',
-    },
+    // pathRewrite: {
+    //   [proxyPrefixUrl]: '/api',
+    // },
     // 远程服务地址
     target: VUE_APP_SERVICE_HOST,
     secure: false,
