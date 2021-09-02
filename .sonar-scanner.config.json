@@ -1,0 +1,6 @@
+{
+  "serverUrl": "http://xxxxx:9000/",
+  "serverToken": "xxxx",
+  "projectKey": "setaria-vue-template-project",
+  "sources": "src/page"
+}

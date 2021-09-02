@@ -1,0 +1,42 @@
+{
+  "name": "setaria-vue-template-project",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "yarn && yarn upgrade:framework && yarn vue-cli-service serve --mode dev",
+    "upgrade:framework": "yarn upgrade skyrunner-web-framework",
+    "lint": "vue-cli-service lint",
+    "analyse": "setaria --script analyse"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "numeral": "^2.0.6",
+    "setaria": "^0.4.26",
+    "setaria-ui": "^1.6.2",
+    "setaria-vue-component-library": "git+https://github.com/setariajs/setaria-vue-component-library.git",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "gulp": "^4.0.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "script-loader": "^0.7.2",
+    "sonarqube-scanner": "^2.8.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
