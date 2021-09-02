@@ -37,14 +37,8 @@ const {
   VUE_APP_API_BASE_URL,
   VUE_APP_SERVICE_HOST,
   VUE_APP_SYSTEM_MODE,
-  VUE_APP_DOC_API_URL,
-  VUE_APP_FILE_UPLOAD_URL,
-  VUE_APP_MINGYUAN_API_URL,
-  VUE_APP_MINGYUAN_FILE_SERVER_URL,
 } = process.env;
 const proxyPrefixUrl = `/${VUE_APP_SITE_ID}/${VUE_APP_API_BASE_URL}`;
-const docApiPrefixUrl = `/${VUE_APP_DOC_API_URL}`;
-const mingyuanApiPrefixUrl = `/${VUE_APP_MINGYUAN_API_URL}`;
 // dev模式代理设置
 if (VUE_APP_SYSTEM_MODE === 'dev') {
   config.devServer.proxy[proxyPrefixUrl] = {
@@ -53,21 +47,6 @@ if (VUE_APP_SYSTEM_MODE === 'dev') {
     },
     // 远程服务地址
     target: VUE_APP_SERVICE_HOST,
-    secure: false,
-    changeOrigin: true,
-  };
-  config.devServer.proxy[docApiPrefixUrl] = {
-    // 远程服务地址
-    target: VUE_APP_FILE_UPLOAD_URL,
-    secure: false,
-    changeOrigin: true,
-  };
-  config.devServer.proxy[mingyuanApiPrefixUrl] = {
-    pathRewrite: {
-      [mingyuanApiPrefixUrl]: '/api',
-    },
-    // 远程服务地址
-    target: VUE_APP_MINGYUAN_FILE_SERVER_URL,
     secure: false,
     changeOrigin: true,
   };

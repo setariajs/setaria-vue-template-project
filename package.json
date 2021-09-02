@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "yarn && yarn upgrade:framework && yarn vue-cli-service serve --mode dev",
+    "dev": "yarn && yarn upgrade:framework && vue-cli-service serve --mode dev",
     "upgrade:framework": "yarn upgrade setaria-vue-component-library",
     "lint": "vue-cli-service lint",
     "analyse": "setaria --script analyse"
